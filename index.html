@@ -142,13 +142,13 @@ body {
 </div>
 
 <!-- MUSIC -->
-<audio autoplay loop>
-  <source src="LastChristmas.mp3" type="audio/mpeg">
-</audio>
+<audio id="bgAudio" loop preload="auto" playsinline> <source src="LastChristmas.mp3" type="audio/mpeg"> Your browser does not support the audio element. </audio> <script> const audio = document.getElementById('bgAudio'); // Try to start muted (muted autoplay is allowed in most browsers). audio.muted = true; audio.play().then(() => { // audio started muted — unmute on the first user gesture const unmute = () => { audio.muted = false; document.removeEventListener('click', unmute); document.removeEventListener('keydown', unmute); }; document.addEventListener('click', unmute, { once: true }); document.addEventListener('keydown', unmute, { once: true }); }).catch((err) => { // Autoplay prevented — show a small Play button as fallback console.error('Autoplay prevented or failed:', err); const btn = document.createElement('button'); btn.id = 'musicPlayBtn'; btn.textContent = '▶ Play music'; btn.style = 'position:fixed; bottom:20px; right:20px; z-index:9999; padding:10px 14px; font-size:16px; border-radius:6px;'; document.body.appendChild(btn); btn.addEventListener('click', () => { audio.muted = false; audio.play().catch(e => console.error('play() failed after click:', e)); btn.remove(); }, { once: true }); }); </script>
+Why this works
 
 </body>
 
 </html>
+
 
 
 
