@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Feliz Navidad Lia</title>
+
+<style>
+/* ---------- PAGE STYLE ---------- */
+body {
+  margin: 0;
+  padding: 0;
+  background: #1b1b1b;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* ---------- SNOW EFFECT ---------- */
+.snow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: url("https://i.imgur.com/8FZ8DOo.png");
+  animation: snow 15s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes snow {
+  0% { background-position: 0px 0px; }
+  100% { background-position: 0px 2000px; }
+}
+
+/* ---------- CONTAINER ---------- */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
+}
+
+/* ---------- MESSAGE ---------- */
+.message {
+  font-size: 20px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255,0,0,0.4);
+}
+
+/* ---------- IMAGES ---------- */
+.photos img {
+  width: 90%;
+  max-width: 300px;
+  border-radius: 20px;
+  margin: 15px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+/* ---------- FLOWER / HEART ANIMATION ---------- */
+.flower {
+  position: fixed;
+  bottom: -20px;
+  width: 15px;
+  height: 15px;
+  background: pink;
+  border-radius: 50%;
+  animation: floatUp 6s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes floatUp {
+  0%   { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-900px) scale(0.5); opacity: 0; }
+}
+
+/* Random positions and delays */
+.flower:nth-child(1) { left: 10%; animation-delay: 0s; }
+.flower:nth-child(2) { left: 20%; animation-delay: 2s; }
+.flower:nth-child(3) { left: 30%; animation-delay: 4s; }
+.flower:nth-child(4) { left: 40%; animation-delay: 1s; }
+.flower:nth-child(5) { left: 50%; animation-delay: 3s; }
+.flower:nth-child(6) { left: 60%; animation-delay: 5s; }
+.flower:nth-child(7) { left: 70%; animation-delay: 2.5s; }
+.flower:nth-child(8) { left: 80%; animation-delay: 4.5s; }
+.flower:nth-child(9) { left: 90%; animation-delay: 1.5s; }
+.flower:nth-child(10) { left: 15%; animation-delay: 3.5s; }
+</style>
+</head>
+
+<body>
+
+<!-- Snow layer -->
+<div class="snow"></div>
+
+<!-- Heart/flower animations -->
+<div class="flower"></div>
+<div class="flower"></div>
+<div class="flower"></div>
+<div class="flower"></div>
+<div class="flower"></div>
+<div class="flower"></div>
+<div class="flower"></div>
+<div class="flower"></div>
+<div class="flower"></div>
+<div class="flower"></div>
+
+<div class="container">
+
+  <h1 style="font-size: 40px; color: #ff4d4d; text-shadow: 0 0 15px red;">
+    🎄 Feliz Navidad, Lia ❤️
+  </h1>
+
+  <div class="message">
+    Feliz Navidad Lia!, Le doy gracias a Dios que llegaste a mi vida, realmente has sido 
+    una bendición para mí de la manera que me has levantado cuando estoy mal, como muestras 
+    tu amor hacia mí, como me demuestras realmente cómo Cristo me ama.  
+    <br><br>
+    Eres una persona hermosa y espero que nunca cambies, siempre sigue siendo tú sin importar 
+    lo que pase, eres una gran mujer así mismo como dice en Proverbios 31:10 esa mujer virtuosa.  
+    <br><br>
+    Así mismo como las diferentes mujeres en la Biblia tuvieron Fe en Dios te puedo ver a ti 
+    confiando en Él no importando lo que pase.  
+    <br><br>
+    Tienes un gran corazón y una pasión brutal por Dios y no mucha gente tiene eso.  
+    <br><br>
+    Te amo muchísimo y le doy gracias a Dios por tu vida. &lt;3
+  </div>
+
+  <!-- Photos -->
+  <div class="photos">
+    <img src="https://i.imgur.com/0koVPiJ.jpeg" />
+    <img src="https://i.imgur.com/QqAzlYX.jpeg" />
+    <img src="https://i.imgur.com/tLqz5nZ.jpeg" />
+  </div>
+
+</div>
+
+<!-- MUSIC -->
+<audio autoplay loop>
+  <source src="Alone on Christmas With You.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+</html>
