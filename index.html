@@ -1,153 +1,230 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Feliz Navidad Lia</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliz Navidad Lia</title>
 
-<style>
-/* ---------- PAGE STYLE ---------- */
-body {
-  margin: 0;
-  padding: 0;
-  background: #1b1b1b;
-  font-family: "Poppins", sans-serif;
-  color: white;
-  text-align: center;
-  overflow-x: hidden;
-}
+  <!-- ---------- STYLES ---------- -->
+  <style>
+    /* ---------- PAGE STYLE ---------- */
+    body {
+      margin: 0;
+      padding: 0;
+      background: #1b1b1b;
+      font-family: "Poppins", sans-serif;
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+    }
 
-/* ---------- SNOW EFFECT ---------- */
-.snow {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  background-image: url("https://i.imgur.com/8FZ8DOo.png");
-  animation: snow 15s linear infinite;
-  opacity: 0.7;
-}
+    /* ---------- SNOW EFFECT ---------- */
+    .snow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background-image: url("https://i.imgur.com/8FZ8DOo.png");
+      animation: snow 15s linear infinite;
+      opacity: 0.7;
+    }
 
-@keyframes snow {
-  0% { background-position: 0px 0px; }
-  100% { background-position: 0px 2000px; }
-}
+    @keyframes snow {
+      0% { background-position: 0px 0px; }
+      100% { background-position: 0px 2000px; }
+    }
 
-/* ---------- CONTAINER ---------- */
-.container {
-  max-width: 800px;
-  margin: auto;
-  padding: 30px;
-}
+    /* ---------- CONTAINER ---------- */
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 30px;
+    }
 
-/* ---------- MESSAGE ---------- */
-.message {
-  font-size: 20px;
-  line-height: 1.7;
-  margin-bottom: 30px;
-  padding: 20px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(255,0,0,0.4);
-}
+    /* ---------- MESSAGE ---------- */
+    .message {
+      font-size: 20px;
+      line-height: 1.7;
+      margin-bottom: 30px;
+      padding: 20px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255,0,0,0.4);
+    }
 
-/* ---------- IMAGES ---------- */
-.photos img {
-  width: 90%;
-  max-width: 300px;
-  border-radius: 20px;
-  margin: 15px;
-  box-shadow: 0 0 10px rgba(255,255,255,0.5);
-}
+    /* ---------- IMAGES ---------- */
+    .photos img {
+      width: 90%;
+      max-width: 300px;
+      border-radius: 20px;
+      margin: 15px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.5);
+    }
 
-/* ---------- FLOWER / HEART ANIMATION ---------- */
-.flower {
-  position: fixed;
-  bottom: -20px;
-  width: 15px;
-  height: 15px;
-  background: pink;
-  border-radius: 50%;
-  animation: floatUp 6s linear infinite;
-  opacity: 0.8;
-}
+    /* ---------- FLOWER / HEART ANIMATION ---------- */
+    .flower {
+      position: fixed;
+      bottom: -20px;
+      width: 15px;
+      height: 15px;
+      background: pink;
+      border-radius: 50%;
+      animation: floatUp 6s linear infinite;
+      opacity: 0.8;
+    }
 
-@keyframes floatUp {
-  0%   { transform: translateY(0) scale(1); opacity: 1; }
-  100% { transform: translateY(-900px) scale(0.5); opacity: 0; }
-}
+    @keyframes floatUp {
+      0%   { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(-900px) scale(0.5); opacity: 0; }
+    }
 
-/* Random positions and delays */
-.flower:nth-child(1) { left: 10%; animation-delay: 0s; }
-.flower:nth-child(2) { left: 20%; animation-delay: 2s; }
-.flower:nth-child(3) { left: 30%; animation-delay: 4s; }
-.flower:nth-child(4) { left: 40%; animation-delay: 1s; }
-.flower:nth-child(5) { left: 50%; animation-delay: 3s; }
-.flower:nth-child(6) { left: 60%; animation-delay: 5s; }
-.flower:nth-child(7) { left: 70%; animation-delay: 2.5s; }
-.flower:nth-child(8) { left: 80%; animation-delay: 4.5s; }
-.flower:nth-child(9) { left: 90%; animation-delay: 1.5s; }
-.flower:nth-child(10) { left: 15%; animation-delay: 3.5s; }
-</style>
+    /* Random positions and delays for flowers */
+    .flower:nth-child(1)  { left: 10%; animation-delay: 0s; }
+    .flower:nth-child(2)  { left: 20%; animation-delay: 2s; }
+    .flower:nth-child(3)  { left: 30%; animation-delay: 4s; }
+    .flower:nth-child(4)  { left: 40%; animation-delay: 1s; }
+    .flower:nth-child(5)  { left: 50%; animation-delay: 3s; }
+    .flower:nth-child(6)  { left: 60%; animation-delay: 5s; }
+    .flower:nth-child(7)  { left: 70%; animation-delay: 2.5s; }
+    .flower:nth-child(8)  { left: 80%; animation-delay: 4.5s; }
+    .flower:nth-child(9)  { left: 90%; animation-delay: 1.5s; }
+    .flower:nth-child(10) { left: 15%; animation-delay: 3.5s; }
+
+    /* ---------- PLAY BUTTON STYLE ---------- */
+    #playBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      background: #ff4d4d;
+      color: #fff;
+      border: none;
+      padding: 12px 16px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+    }
+    #playBtn.playing { background: #cc0000; }
+    #playBtn:focus { outline: 2px solid #fff; outline-offset: 2px; }
+
+  </style>
 </head>
 
 <body>
+  <!-- ---------- SNOW LAYER ---------- -->
+  <div class="snow"></div>
 
-<!-- Snow layer -->
-<div class="snow"></div>
+  <!-- ---------- FLOWERS ---------- -->
+  <div class="flower"></div>
+  <div class="flower"></div>
+  <div class="flower"></div>
+  <div class="flower"></div>
+  <div class="flower"></div>
+  <div class="flower"></div>
+  <div class="flower"></div>
+  <div class="flower"></div>
+  <div class="flower"></div>
+  <div class="flower"></div>
 
-<!-- Heart/flower animations -->
-<div class="flower"></div>
-<div class="flower"></div>
-<div class="flower"></div>
-<div class="flower"></div>
-<div class="flower"></div>
-<div class="flower"></div>
-<div class="flower"></div>
-<div class="flower"></div>
-<div class="flower"></div>
-<div class="flower"></div>
+  <!-- ---------- MAIN CONTAINER ---------- -->
+  <div class="container">
+    <h1 style="font-size: 40px; color: #ff4d4d; text-shadow: 0 0 15px red;">
+      🎄 Feliz Navidad, Lia ❤️
+    </h1>
 
-<div class="container">
+    <div class="message">
+      Feliz Navidad Lia!, Le doy gracias a Dios que llegaste a mi vida, realmente has sido
+      una bendición para mí de la manera que me has levantado cuando estoy mal, como muestras
+      tu amor hacia mí, como me demuestras realmente cómo Cristo me ama.  
+      <br><br>
+      Eres una persona hermosa y espero que nunca cambies, siempre sigue siendo tú sin importar
+      lo que pase, eres una gran mujer así mismo como dice en Proverbios 31:10 esa mujer virtuosa.  
+      <br><br>
+      Así mismo como las diferentes mujeres en la Biblia tuvieron Fe en Dios te puedo ver a ti
+      confiando en Él no importando lo que pase.  
+      <br><br>
+      Tienes un gran corazón y una pasión brutal por Dios y no mucha gente tiene eso.  
+      <br><br>
+      Te amo muchísimo y le doy gracias a Dios por tu vida. &lt;3
+    </div>
 
-  <h1 style="font-size: 40px; color: #ff4d4d; text-shadow: 0 0 15px red;">
-    🎄 Feliz Navidad, Lia ❤️
-  </h1>
-
-  <div class="message">
-    Feliz Navidad Lia!, Le doy gracias a Dios que llegaste a mi vida, realmente has sido 
-    una bendición para mí de la manera que me has levantado cuando estoy mal, como muestras 
-    tu amor hacia mí, como me demuestras realmente cómo Cristo me ama.  
-    <br><br>
-    Eres una persona hermosa y espero que nunca cambies, siempre sigue siendo tú sin importar 
-    lo que pase, eres una gran mujer así mismo como dice en Proverbios 31:10 esa mujer virtuosa.  
-    <br><br>
-    Así mismo como las diferentes mujeres en la Biblia tuvieron Fe en Dios te puedo ver a ti 
-    confiando en Él no importando lo que pase.  
-    <br><br>
-    Tienes un gran corazón y una pasión brutal por Dios y no mucha gente tiene eso.  
-    <br><br>
-    Te amo muchísimo y le doy gracias a Dios por tu vida. &lt;3
+    <!-- ---------- PHOTOS ---------- -->
+    <div class="photos">
+      <img src="https://i.imgur.com/0koVPiJ.jpeg" />
+      <img src="https://i.imgur.com/QqAzlYX.jpeg" />
+      <img src="https://i.imgur.com/tLqz5nZ.jpeg" />
+    </div>
   </div>
 
-  <!-- Photos -->
-  <div class="photos">
-    <img src="https://i.imgur.com/0koVPiJ.jpeg" />
-    <img src="https://i.imgur.com/QqAzlYX.jpeg" />
-    <img src="https://i.imgur.com/tLqz5nZ.jpeg" />
-  </div>
+  <!-- ---------- MUSIC ---------- -->
+  <audio id="bgAudio" loop preload="auto" playsinline>
+    <source src="LastChristmas.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
-</div>
+  <!-- ---------- PLAY BUTTON ---------- -->
+  <button id="playBtn" aria-pressed="false" aria-label="Play music">▶ Play music</button>
 
-<!-- MUSIC -->
-<audio id="bgAudio" loop preload="auto" playsinline> <source src="LastChristmas.mp3" type="audio/mpeg"> Your browser does not support the audio element. </audio> <script> const audio = document.getElementById('bgAudio'); // Try to start muted (muted autoplay is allowed in most browsers). audio.muted = true; audio.play().then(() => { // audio started muted — unmute on the first user gesture const unmute = () => { audio.muted = false; document.removeEventListener('click', unmute); document.removeEventListener('keydown', unmute); }; document.addEventListener('click', unmute, { once: true }); document.addEventListener('keydown', unmute, { once: true }); }).catch((err) => { // Autoplay prevented — show a small Play button as fallback console.error('Autoplay prevented or failed:', err); const btn = document.createElement('button'); btn.id = 'musicPlayBtn'; btn.textContent = '▶ Play music'; btn.style = 'position:fixed; bottom:20px; right:20px; z-index:9999; padding:10px 14px; font-size:16px; border-radius:6px;'; document.body.appendChild(btn); btn.addEventListener('click', () => { audio.muted = false; audio.play().catch(e => console.error('play() failed after click:', e)); btn.remove(); }, { once: true }); }); </script>
-Why this works
+  <!-- ---------- SCRIPT ---------- -->
+  <script>
+    (function() {
+      const audio = document.getElementById('bgAudio');
+      const btn = document.getElementById('playBtn');
+
+      async function playAudio() {
+        try {
+          await audio.play();
+          btn.textContent = '⏸ Pause music';
+          btn.classList.add('playing');
+          btn.setAttribute('aria-pressed', 'true');
+        } catch (err) {
+          console.error('play() failed:', err);
+          alert('Playback failed. Please interact with the page and try again.');
+        }
+      }
+
+      function pauseAudio() {
+        audio.pause();
+        btn.textContent = '▶ Play music';
+        btn.classList.remove('playing');
+        btn.setAttribute('aria-pressed', 'false');
+      }
+
+      btn.addEventListener('click', async () => {
+        if (audio.paused) {
+          await playAudio();
+        } else {
+          pauseAudio();
+        }
+      });
+
+      audio.addEventListener('pause', () => {
+        btn.textContent = '▶ Play music';
+        btn.classList.remove('playing');
+        btn.setAttribute('aria-pressed', 'false');
+      });
+
+      audio.addEventListener('playing', () => {
+        btn.textContent = '⏸ Pause music';
+        btn.classList.add('playing');
+        btn.setAttribute('aria-pressed', 'true');
+      });
+
+      // Optional: play audio on first user click anywhere
+      document.addEventListener('click', function once() {
+        audio.play().catch(()=>{});
+        document.removeEventListener('click', once);
+      }, { once: true });
+
+    })();
+  </script>
 
 </body>
-
 </html>
+
 
 
 
